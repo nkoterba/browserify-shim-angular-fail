@@ -1,0 +1,31 @@
+{
+  "name": "browserify-shim-angular-fail",
+  "version": "1.0.0",
+  "description": "Shows how browserify-shim is improperly shimming angular using package transform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkoterba/browserify-shim-angular-fail.git"
+  },
+  "keywords": [
+    "browserify-shim",
+    "angular",
+    "browserify"
+  ],
+  "author": "Nathan Koterba <nathan.koterba@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkoterba/browserify-shim-angular-fail/issues"
+  },
+  "homepage": "https://github.com/nkoterba/browserify-shim-angular-fail",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.3"
+  },
+  "dependencies": {
+    "angular": "^1.3.13"
+  }
+}
