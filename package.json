@@ -4,7 +4,8 @@
   "description": "Shows how browserify-shim is improperly shimming angular using package transform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "fails": "gulp fails; head -n 10 build/fails_bundle.js",
+    "works": "gulp works; head -n 10 build/works_bundle.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,37 @@
     "url": "https://github.com/nkoterba/browserify-shim-angular-fail/issues"
   },
   "homepage": "https://github.com/nkoterba/browserify-shim-angular-fail",
+  "browser": {
+    "angular": "./node_modules/angular/angular.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "browserify-shim",
+        {
+          "global": true
+        }
+      ]
+    ]
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular",
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
   "devDependencies": {
     "browserify": "^9.0.3",
-    "browserify-shim": "^3.8.3"
+    "browserify-shim": "^3.8.3",
+    "gulp": "^3.8.11",
+    "gulp-size": "^1.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
-    "angular": "^1.3.13"
+    "angular": "^1.3.13",
+    "jquery": "^2.1.3"
   }
 }
